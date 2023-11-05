@@ -1,0 +1,51 @@
+{
+  "settingsInheritedFrom": "JohnDeere-Tech/whitesource-config@main",
+  "remediateSettings": {
+    "enableRenovate": "true",
+    "rebaseWhen": "behind-base-branch",
+    "prCreation": "not-pending",
+    "extends": [
+      "config:base", 
+      ":automergeMinor",
+      ":disableDependencyDashboard"
+    ],
+    "packageRules": [
+      {
+        "matchDatasources": [
+          "docker"
+        ],
+        "registryUrls": [
+          "https://docker.deere.com"
+        ]
+      },
+      {
+        "matchDatasources": [
+          "pypi"
+        ],
+        "registryUrls": [
+          "https://pypi.deere.com/simple"
+        ]
+      }, 
+      {
+        "groupName": "Terraform",
+	"matchPackageNames": ["hashicorp/terraform", "terraform"]
+      },
+      {
+	"matchUpdateTypes": ["minor", "patch", "pin", "digest"],
+      	"automerge": true
+      }
+    ],
+    "terraform": {
+	    "rangeStrategy": "bump"
+    },
+    "vulnerabilityAlerts": {
+      "enabled": true
+    },
+    "minor": {
+      "automerge": true
+    },
+    "patch": {
+      "automerge": true
+    }
+  }
+}
