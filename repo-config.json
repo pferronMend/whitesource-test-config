@@ -1,5 +1,10 @@
 {
   "settingsInheritedFrom": "pferronMend/whitesource-config@main",
+  "checkRunSettings": {
+    "vulnerableCheckRunConclusionLevel": "failure",
+    "displayMode": "diff",
+    "useMendCheckNames": false
+  }
   "remediateSettings": {
     "enableRenovate": "true",
     "rebaseWhen": "behind-base-branch",
