@@ -1,5 +1,5 @@
 {
-  "settingsInheritedFrom": "JohnDeere-Tech/whitesource-config@main",
+  "settingsInheritedFrom": "pferronMend/whitesource-config@main",
   "remediateSettings": {
     "enableRenovate": "true",
     "rebaseWhen": "behind-base-branch",
